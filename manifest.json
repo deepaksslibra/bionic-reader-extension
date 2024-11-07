@@ -13,6 +13,14 @@
     },
     "permissions": [
       "activeTab"
-    ]
+    ],
+    "content_scripts": [
+    {
+      "js": ["scripts/bionic-reading.js"],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
   }
   
