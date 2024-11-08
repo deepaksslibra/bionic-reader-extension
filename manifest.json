@@ -1,26 +1,26 @@
 {
     "manifest_version": 3,
-    "name": "My First Extension",
+    "name": "Bionic Reader",
     "version": "1.0",
-    "description": "This is a simple Chrome extension example",
-    "action": {
-      "default_popup": "index.html",
-      "default_icon": {
+    "description": "Extract and display text in bionic reading format",
+    "icons": {
         "16": "icon16.png",
         "48": "icon48.png",
         "128": "icon128.png"
-      }
     },
     "permissions": [
-      "activeTab"
+        "activeTab",
+        "scripting"
     ],
-    "content_scripts": [
-    {
-      "js": ["scripts/bionic-reading.js"],
-      "matches": [
-        "<all_urls>"
-      ]
+    "action": {
+        "default_icon": {
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        }
+    },
+    "background": {
+        "service_worker": "scripts/background.js"
     }
-  ]
-  }
+}
   
